@@ -5,6 +5,7 @@ var playerName = "";
 var pstats = { health: 100, hits: 0, swordcount: 0, fswordcount: 0, bandaidcount: 0 };
 var cstats = { health: 100, hits: 0, };
 
+//reset game
 function reset() {
   pstats = { health: 100, hits: 0, swordcount: 0, fswordcount: 0, bandaidcount: 0 };
   cstats = { health: 100, hits: 0, };
@@ -28,6 +29,16 @@ function upDate() {
     reset();
   }
 }
+
+//attempted image change for one second, activated but action buttons
+//function hit() {
+//  document.getElementById("imge").src = "hit.png";
+//}
+
+//function mainImage() {
+//  setTimeout(document.getElementById("imge").src = "main.png", 1000);
+//}
+
 
 //players name
 function namePrompt() {
@@ -77,6 +88,7 @@ function ckick() {
   document.getElementById("cturns").innerText += "\nkicks";
   upDate();
 }
+//items
 function sword() {
   switch (pstats.hits > 9 && pstats.swordcount !== 1) {
     case true:
